@@ -1,16 +1,10 @@
-import { Text, TextInput, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Stack } from "expo-router"
 
 export default function RootLayout() {
   return (
-    <SafeAreaView style={{backgroundColor: "blue"}}>
-      <View style={{padding: 2, backgroundColor: "yellow"}}>
-        <Text style={{paddingLeft: 5, backgroundColor: "aqua"}}>Hi Sam</Text>
-        <TextInput
-         style={{backgroundColor: "green"}}
-         placeholder="Enter text"
-        />
-      </View>
-    </SafeAreaView>
+    <Stack>
+      <Stack.Screen name="index" options={{ title: 'Home' }} />
+      <Stack.Screen name="about" options={{ title: 'About' }}/>
+    </Stack>
   )
 }
